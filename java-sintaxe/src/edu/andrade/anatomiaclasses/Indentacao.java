@@ -1,4 +1,4 @@
-package AnatomiaClasses;
+package edu.andrade.anatomiaclasses;
 
 public class Indentacao {
 

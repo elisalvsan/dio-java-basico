@@ -1,4 +1,4 @@
-package AnatomiaClasses;
+package edu.andrade.anatomiaclasses;
 
 public class DeclararMetodo {
     public static void main(String[] args) {

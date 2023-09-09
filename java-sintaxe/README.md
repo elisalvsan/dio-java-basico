@@ -3,7 +3,7 @@
 ### Aula de anatomia de classes
 
 ```Java
-public class AnatomiaClasses.NomearVariavel {
+public class edu.andrade.anatomiaclasses.NomearVariavel {
 
     public static void main(String[] args) {
         /*quando se tem uma variavel que é toda maiuscula se presupoe que ela é final
@@ -17,7 +17,7 @@ public class AnatomiaClasses.NomearVariavel {
 ```
 
 ```Java
-public class AnatomiaClasses.NomearVariavel {
+public class edu.andrade.anatomiaclasses.NomearVariavel {
 
     public static void main(String[] args) {
         // Declarações inválidas de variáveis
@@ -29,7 +29,7 @@ public class AnatomiaClasses.NomearVariavel {
 }
 ```
 ```Java
-public class AnatomiaClasses.NomearVariavel {
+public class edu.andrade.anatomiaclasses.NomearVariavel {
 
     public static void main(String[] args) {
         // Declarações válidas de variáveis

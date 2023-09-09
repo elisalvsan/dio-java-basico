@@ -1,4 +1,4 @@
-package AnatomiaClasses;
+package edu.andrade.anatomiaclasses;
 
 public class DeclararVariavel {
     public static void main(String[] args) {
