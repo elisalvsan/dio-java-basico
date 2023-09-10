@@ -162,3 +162,84 @@ calcularImprimir(){} //este método deveria ter uma única finalidade
 
 ### Aula de Tipos e Variáveis
 
+**Tipos de dados**
+
+No Java, existem algumas palavras reservadas para a representação dos 
+tipos de dados básicos que precisam ser manipulados para a construção
+de programas. Estes tipos de dados são conhecidos como tipos primitivos.
+
+> ℹ Os oitos tipos primitivos em Java são:
+> 
+> int, byte, short, long, float, double, boolean, char - esses tipos não
+> são considerados objetos, e portanto representam valores brutos. Eles
+> são armazenados diretamente na pilha de memória. (Memory stack)
+
+**Declaração de Variáveis**
+
+Variável é uma identificação de um espaço em memória utilizado pelo nosso
+programa. Seguindo as convenções em linguagem de programação, toda variável
+é composta por: tipo de dados + identificação + valor atribuído.
+
+A estrutura padrão para se declarar uma variável sempre é:
+~~~
+<Tipo> <nomeVariavel> <atribuicaoDeValorOpicional>
+~~~
+
+Exemplos abaixo:
+
+~~~Java
+int idade;
+int anoFabricacao = 2021;
+double salarioMinimo = 2500;
+~~~
+
+⚠ Existem algumas peculiaridades a trabalhar com alguns tipos especificos.
+Observe no exemplo abaixo:
+
+~~~Java
+public class TiposDados{
+    public static void main(String[] args){
+      byte idade = 123;
+      short ano = 2023;
+      int cep = 21070333; // se começar com zero, talvez tenha que ser outro tipo
+      long cpf = 98765432109L; // se começar com zero, talvez tenha que ser outro tipo
+      float pi = 3.14F;  
+      double salario = 1275.33;
+    }
+    
+    }
+~~~
+
+⚠ JAVA É FORTMENTE TIPADO
+
+**Constantes**
+
+São valores armazenados em memória que não podem ser modificados depois
+de declarados. Em Java, esses valores são representados pela palavra 
+reservada _final_, seguida do tipo.
+
+Por convenção, **constantes** são sempre escritas em CAIXA ALTA.
+
+Abaixo temos um exemplo sobre o uso de variáveis e constantes:
+
+~~~JAVA
+public class TiposVariaveis {
+    public static void main(String[] args) {
+
+        //declaro uma variável do tipo inteiro e atribuo a ela o valor 5.
+        int numero = 5;
+
+        /*altero o valor da variável para 10,
+        não é necessario declarar o tipo dela novamente,
+        pois já foi declarado acima.*/
+        numero = 10;
+        System.out.println(numero);
+
+        /* tem que ser declarada final além da convensão de nome
+            para que esse valor não possa ser alterado.
+         */
+
+        final double VALOR_DE_PI = 3.14;
+    }
+}
+~~~
