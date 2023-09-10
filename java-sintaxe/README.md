@@ -2,7 +2,8 @@
 
 ### Aula de anatomia de classes
 
-```Java
+---
+~~~Java
 public class edu.andrade.anatomiaclasses.NomearVariavel {
 
     public static void main(String[] args) {
@@ -14,9 +15,9 @@ public class edu.andrade.anatomiaclasses.NomearVariavel {
         Está variavel não pode ser alterada */
     }
 }
-```
+~~~
 
-```Java
+~~~Java
 public class edu.andrade.anatomiaclasses.NomearVariavel {
 
     public static void main(String[] args) {
@@ -27,7 +28,7 @@ public class edu.andrade.anatomiaclasses.NomearVariavel {
         int long = 1; // Não pode atribuir uma palavra reservada para nomear uma variavel
     }
 }
-```
+~~~
 ```Java
 public class edu.andrade.anatomiaclasses.NomearVariavel {
 
@@ -40,6 +41,7 @@ public class edu.andrade.anatomiaclasses.NomearVariavel {
     }
 }
 ```
+---
 Declarar uma **variável** em Java segue sempre a seguinte estrutura:
 ```Java
     // Estrutura
@@ -52,7 +54,7 @@ Declarar uma **variável** em Java segue sempre a seguinte estrutura:
     double altura = 1.62;
     Dog spike;
 ```
-
+---
 Declarando **métodos** em Java segue uma estrutura bem simples:
 ```Java
     // Estrutura
@@ -63,7 +65,7 @@ Declarando **métodos** em Java segue uma estrutura bem simples:
 
     String formatarCep(long cep)
 ```
-
+---
 **Indentar** é um termo utilizado para escrever o código do 
 programa de forma hierárquica, facilitando assim a
 visualiazção e o entendimento do programa.
@@ -98,9 +100,65 @@ visualiazção e o entendimento do programa.
     }
 }
 ```
-
+---
 **Organizando arquivos**
     
 À medida que o sistema vai evoluindo, surgem novos arquivos(código fonte)
 em nossa estrutura de arquivos do projeto. Isso exige que seja realizado
 uma organização desses arquivos através de **pacotes (packeges)**.
+---
+**Java Beans**
+
+Uma das maiores dificuldades na programação é escrever algoritmos legíveis
+a níveis que sejam compreendidos por todo o seu time ou por você mesmo no
+futuro. Para isoo a linguagem Java sugere, através de convenções, formas de
+escrita universal para nossas classes, atributos, métodos e pacotes.
+
+**Variáveis**
+
+Sugestções de nomenclatura:
+
+ - Uma varíavel deve ser clara, sem abreviações ou definição sem sentido;
+ - Uma variável é sempre no singular, **exeto quando se referir a um array ou coleção**;
+ - Defina um idioma único para suas variávei. Se você for declarar variáveis
+em inglês, defina todas em inglês.
+
+Não recomendado:
+~~~Java
+double salMedio = 1500.23; //variável abreviada
+String emails = "aluno@escola.com"; //confuso se a variável recebe somente um valor ou varios
+String myName = "Antony"; //se idioma pt-BR, remomendado seguir tudo em portugues
+~~~
+
+Recomendado:
+~~~Java
+double salarioMedio = 1500.23;
+String email = "aluno@escola.com";
+String [] emails = {"aluno@escola.com","professor@escola.com"};
+String meuNome = "Antony";
+~~~
+
+**Métodos**
+
+Deverão ser nomeados como verbos, através de uma mistura de letras minúsculas
+e maiúsculas. Em princípio todas as letras que compõem o nome devem ser mantidas
+em minúsculo, com exceção da primeira letra de cada palavra composta a partir
+da segunda palavra.
+
+Exemplos sugeridos para nomeclatura de métodos: 
+~~~Java
+somar(int n1, int n2){}
+
+abrirConexao(){}
+
+concluirProcessamento(){}
+
+findById(int id){}
+
+calcularImprimir(){} //este método deveria ter uma única finalidade
+~~~
+
+---
+
+### Aula de Tipos e Variáveis
+
