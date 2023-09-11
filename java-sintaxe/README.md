@@ -451,3 +451,31 @@ public class Conta{
     }
 }
 ~~~
+---
+
+### Palavras reservadas
+
+São identificadores de uma linguagem que já possuem uma finalidade específica, portanto
+não podem ser utilizados para nomear veriáveis, classes, métodos ou atributos.
+
+A linguagem Java possui 52 palavras reservadas.
+
+<img src="https://3025166959-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FjFR9F4NToQ6FD39fU3wC%2Fuploads%2Fgit-blob-d55c8e2cee24f556c8be85dcfbba3022ad042ab4%2Fimage%20(10)%20(1)%20(1)%20(1)%20(1)%20(1).png?alt=media"/>
+
+---
+**Controle de pacotes**
+
+**import**: importa pacotes ou classes para dentro do código
+
+**package**: especifica a que pacote todas as classesde um arquivo pertencem
+
+---
+**Modificadores de acesso**
+
+**public**: acesso de qualquer classe
+
+**private**: acesso apenas dentro da classe
+
+**protected**: acesso por classes no mesmo pacote e subclasses
+
+---
