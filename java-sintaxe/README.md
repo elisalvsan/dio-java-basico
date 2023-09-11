@@ -168,11 +168,10 @@ No Java, existem algumas palavras reservadas para a representação dos
 tipos de dados básicos que precisam ser manipulados para a construção
 de programas. Estes tipos de dados são conhecidos como tipos primitivos.
 
-> ℹ Os oitos tipos primitivos em Java são:
-> 
-> int, byte, short, long, float, double, boolean, char - esses tipos não
-> são considerados objetos, e portanto representam valores brutos. Eles
-> são armazenados diretamente na pilha de memória. (Memory stack)
+    ℹ Os oitos tipos primitivos em Java são:
+    int, byte, short, long, float, double, boolean, char - esses tipos não são considerados 
+    objetos, e portanto representam valores brutos. Eles são armazenados diretamente na pilha 
+    de memória. (Memory stack)
 
 **Declaração de Variáveis**
 
@@ -193,7 +192,7 @@ int anoFabricacao = 2021;
 double salarioMinimo = 2500;
 ~~~
 
-⚠ Existem algumas peculiaridades a trabalhar com alguns tipos especificos.
+    ⚠ Existem algumas peculiaridades a trabalhar com alguns tipos especificos.
 Observe no exemplo abaixo:
 
 ~~~Java
@@ -210,7 +209,7 @@ public class TiposDados{
     }
 ~~~
 
-⚠ JAVA É FORTMENTE TIPADO
+    ⚠ JAVA É FORTMENTE TIPADO
 
 **Constantes**
 
@@ -243,3 +242,77 @@ public class TiposVariaveis {
     }
 }
 ~~~
+---
+
+### Aula de Operadores
+
+Operadores são símbolos especiais que tem um significado próprio para a 
+linguagem e estão associados a determinadas operações.
+
+**Classificação do operadores**
+
+**Atribuição**
+
+Representando pelo símbolo de igualdade =.
+
+É utilizado para definir o valor inicial ou sobrescrever o valor de uma
+variável.
+
+**Aritméticos**
+
+O operador aritmético é utilizado para realizar operações matemáticas entre
+valores numéricos, podendo se tornar ou não uma expressão mais complexa.
+
+Os operadores são: + (adição), - (subtração), * (multiplicação) e / (divisão).
+
+    ℹ O OPERADOR DE ADIÇÃO (+), QUANDO UTILIZADO EM VARIÁVEIS DO TIPO TEXTO, 
+    REALIZARÁ A "CONCATENAÇÃO DE TEXTOS"
+
+**Unário**
+
+São aplicados juntamente com um outro operador aritmético. Eles realizam alguns
+trabalhos básicos como incrementar, decrementar, inverter valores numéricos e
+booleanos.
+
+- (+) **Operador unário de valor positivo** - números são positivos sem esse
+operador explicitamente;
+- (-) **Operador unário de valor negativo** - nega um número ou expressão
+aritmética;
+- (++) **Operador unário de incremento de valor** - incrementa o valor em 1
+unidade;
+- (--) **Operador unário de decremento de valor** - decrementa o valor em 1
+unidade;
+- (!) **Operador unário lógico de negação** - nega o valor de uma expressão
+booleana.
+
+**Ternário**
+
+É uma forma resumida para definir uma condição e escolher por um dentre dois valores.
+
+O operador ternário é representado pelos simbolos ?: utilizados na seguinte estrutura
+de sintaxe: 
+
+    <Expressão Condicional> ? <Caso condição seja true> : <Caso condição seja false>
+
+**Relacionais**
+
+Avaliam a relação entre duas variáveis ou expressões. Neste caso, mas precisamente,
+definem se o operado à esquerda é igual, diferente, menor, menor ou igual, maior ou
+maior ou igual ao da direita, retornando um valor booleano como resultado.
+
+- == Quando desejamos verificar se uma variável é IGUAL A outra. 
+- != Quando desejamos verificar se uma variável é DIFERENTE da outra.
+- '>' Quando desejamos verificar se uma variável é MAIOR QUE a outra.
+- '>=' Quando desejamos verificar se uma variável é MAIOR OU IGUAL a outra.
+- < Quando desejamos verificar se uma variável é MENOR QUE a outra.
+- <= Quando desejamos verificar se uma variável é MENOOR OU IGUAL a outra.
+
+**Lógicos**
+
+Os operadores lógicos representam o recurso que nos permite criar expressões
+lógicas maiores a partir da junção de duas ou mais expressões.
+
+- && Operador Lógico "E"
+- || Operador Lógico "OU"
+
+### Aula de Métodos
