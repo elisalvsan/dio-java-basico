@@ -314,5 +314,89 @@ lógicas maiores a partir da junção de duas ou mais expressões.
 
 - && Operador Lógico "E"
 - || Operador Lógico "OU"
-
+---
 ### Aula de Métodos
+
+    Todas as ações das aplicações são consideradas métodos
+
+Uma classe é definida por atributos e métodos. Vimos que atributos são, em sua
+grande maioria, variáveis de diferentes tipos e valores. Os métodos, por sua vez,
+correspondem a **funções** ou **sub-rotinas** disponíveis dentro de nossas classes.
+
+**Critério de nomeação de Métodos**
+
+Esses critérios não são obrigatórios, mas é recomendácel que sejam seguidos, pois
+essas convenções facilitam a vida dos programadores ao trabalharem em códigos de forma
+colaborativa. Ao seguir estas convenções, tornamos o código mais legível.
+
+**Critérios:**
+
+- Deve ser nomeado como verbo
+- Seguir o padrão camelCase (Todas as letras minúsculas com exceção da primeira letra
+da segunda palavra).
+    
+
+    ℹ NÃO EXISTE EM JAVA O CONCEITO DE MÉTODOS GLOBAIS. TODOS OS MÉTODOS DEVEM SEMPRE SER DEFINIDOS
+    DENTRO DE UMA CLASSE.
+
+**Critério de definição de métodos**
+
+Como saber a melhor forma de definir os métodos das nossas classes? Para chegar as esta
+conclusão, somos auxiliados por uma convenção estrutural para todos os métodos. Essa
+convenção é determinada pelos aspectos abaixo:
+
+1. **Qual a proposta principal do método?** Você deve se perguntar constantemente até
+compreender a real finalidade do mesmo.
+2. **Qual o tipo de retorno esperado após executar o método?** Você deve analisar se
+o método será responsável por retornar algum valor ou não.
+3. **Quais os parâmetros serão necessários para execução do método?** Os métodos as vezes
+precisão de argumentos como críterios para a execução.
+4. **O método possui o risco de apresentar alguma exceção?** Exceções são comuns na
+execução de métodos, as vezes é necessário prever a tratar a possível existência de uma
+exceção.
+5. **Qual a visibilidade do método?** Será necessário que o método seja visível a toda
+aplicação, somente em mesmo pacotes, através de herança ou somente a nível a própria
+classe.
+
+**Exemplo:**
+
+~~~Java
+public class MyClass{
+    public double somar(int num1, int num2){
+        //logica - finalidade do método
+        return ...;
+    }
+    
+    public void imprimir(String texto){
+        //logica - finalidade do método
+    }
+    
+    // throws Exception: indica que o método ao ser utilizado poderá gerar uma exceção
+    public double dividir(int dividendo, int divisor) throws Exception{}
+    
+    //método privado, não pode ser visto por outras classes
+    private void metodoPrivado(){}
+    
+    //alguns equívocos estruturais
+    public void validar(){
+        //este método deveria retornar algum valor
+        //no caso boolean (true ou false)
+    }
+    
+    public void calcularEnviar(){
+        //um método deve representar uma única responsabilidade
+    }
+    
+    public void gravarCliente(String nome, String cpf, Integer idade){
+        //este método tem a finalidade de gravar
+        //informações de um cliente, por que não criar
+        //um objeto cliente e passar como parâmetro
+        //veja abaixo
+    }
+    
+    public void gravarCliente(Cliente cliente){}
+    //ou
+    public void gravar(Cliente cliente){}
+    
+}
+~~~
