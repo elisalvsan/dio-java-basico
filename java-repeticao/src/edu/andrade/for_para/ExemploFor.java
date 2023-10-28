@@ -4,9 +4,9 @@ public class ExemploFor {
 
     public static void main(String[] args) {
         for (int carneirinhos  = 1; carneirinhos <= 20; carneirinhos++){
-            System.out.printf(carneirinhos + " carneirinho\n");
+            System.out.println(carneirinhos + " carneirinho");
         }
 
-        System.out.printf("dormindo zzz...");
+        System.out.println("dormindo zzz...");
     }
 }
