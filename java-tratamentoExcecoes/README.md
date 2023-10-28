@@ -122,3 +122,70 @@ public class AboutMe {
     }
 }
 ```
+---
+
+## Hierarquias das exceções e exceções customizadas
+
+---
+
+### Hierarquia das exceções
+
+A linguagem Java dispõe de uma variedade de classes que representa, exceções, e estas classes são organizadas em uma hierarquia denominadas **Checked and Unchecked Exceptions** ou *Exceções Checadas e Não Checadas.*
+
+![image](https://arquivo.devmedia.com.br/artigos/Diogo_De_Souza_Castro/excecoesjava/image01.png)
+
+>:warning: **Atenção:** O que determina se uma exceção é classificada como **checada** ou **não checada**, é o risco dela ser disparada logo você precisa tratá-la.
+
+ - Exemplo: Vamos imaginar que precisamos realizar de duas maneiras a conversão de uma String para um numéro, porém o texto contém Alfanuméricos.
+
+```Java
+import java.text.NumberFormat;
+import java.text.ParseException;
+
+public class ExemploExcecao {
+    public static void main(String[] args) {
+        Number valor;
+        try {
+            valor = NumberFormat.getInstance().parse("a1.75");
+            System.out.println(valor);
+        }catch (ParseException e){
+            e.printStackTrace();
+        }
+    }
+}
+//Este código apesar de ser o que o professor apresentou, está dando erro
+```
+---
+### Exceções customizadas
+
+- Exemplo: regra de negócio, para formatar um cep necessita sempre ter 8 dígitos, casso contrário lanãrá uma exceção que denominamos de **CepInvalidoException**
+
+- Primeiro criamos nossa exceção:
+
+```Java
+public class CepInvalidoException extends Exception{ }
+```
+
+- Em seguida criamos nosso método de formatar o cep.
+
+```Java
+public class FormatadorCepExemplo {
+    public static void main(String[] args) {
+        try{
+            String cepFormatado = formatarCep("58066928");
+            System.out.println(cepFormatado);
+        }catch (CepInvalidoException e){
+            System.out.println("O cep não corresponde com as regras de negócio.");
+        }
+    }
+
+    static String formatarCep(String cep) throws CepInvalidoException{
+        if (cep.length() !=8){
+            throw  new CepInvalidoException();
+        }
+
+        //simulando um cep formatado
+        return "58.066-928";
+    }
+}
+```
