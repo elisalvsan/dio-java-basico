@@ -29,7 +29,7 @@ for(bloco de inicialização; expressão booleana de validação; bloco de atual
     
 }
 ```
-Exemplo: 
+- Exemplo de for: 
 ```Java
 public class ExemploFor {
 
@@ -48,6 +48,8 @@ public class ExemploFor {
 
 Também usamos o controole de fluxo **for** para interagir sobre arrays e coleções:
 
+- Exemplo de For com array
+
 ```Java
 public class ExemploForArray {
     public static void main(String[] args) {
@@ -65,7 +67,7 @@ public class ExemploForArray {
 
 O uso do **for / each** está fortemente relacionado com um cenário onde contenha um array ou coleção, e assim, a interação é baseada aos elements da coleção.
 
-Exemplo: 
+ - Exemplo de for each: 
 ```Java
 public class ExemploForArray {
     public static void main(String[] args) {
@@ -85,7 +87,7 @@ public class ExemploForArray {
 
 **Continue**, como o nome diz, ele 'continua' o laço. O comando **break** interrompe o laço, já o **continue** interrompe somente a iteração atual.
 
-Exemplo break:
+- Exemplo break:
 ```Java
 public class ExemploBreakContinue {
     public static void main(String[] args) {
@@ -100,7 +102,7 @@ public class ExemploBreakContinue {
 }
 ```
 
-Exemplo continue:
+- Exemplo continue:
 ```Java
 public class ExemploBreakContinue {
     public static void main(String[] args) {
@@ -113,4 +115,69 @@ public class ExemploBreakContinue {
         }
     }
 }
+```
+---
+
+## While
+O laço **while** (na tradução literal pra a língua portuguesa "enquanto") determina que enquanto uma condição for válida, o bloco de código será executado. O laço **while** testa a condição antes de executar o código, logo, caso a condição seja inválida no primeiro teste o bloco nem será executado.
+
+A estrutura de sintaxe do controle de repetição **while** é exibida abaixo:
+
+```
+ //estrutura do controle de fluxo while
+ 
+ while(expressão booleana de validação){
+    //comando que será executado até que a
+    //expressão de validação torne-se falsa
+ }
+```
+- Exemplo de while:
+```Java
+import java.util.concurrent.ThreadLocalRandom;
+public class ExemploWhile {
+
+    public static void main(String[] args) {
+
+        double mesada = 50.0;
+        while(mesada>0){
+
+            Double valorDoce = valorAleatorio();
+
+            if (valorDoce > mesada){
+                valorDoce = mesada;
+            }
+            System.out.println("Valor do doce: " + String.format("%.2f", valorDoce) + " - Adicionado no carrinho");
+            mesada -= valorDoce;
+        }
+
+        System.out.println("Mesada: " + mesada);
+        System.out.println("Joãozinho gastou toda a sua mesada em doces.");
+    }
+
+    private static double valorAleatorio(){
+        return ThreadLocalRandom.current().nextDouble(2,8);
+    }
+}
+```
+
+## Do While
+
+O laço **do / while** (na tradução literal para a língua portuguesa "faça... enquanto"), assim como o laço **while**, considera que enquanto uma determida condição for válida o bloco de código será executado. Entretanto, **do / while** testa a condição após executar o código, sendo assim, mesmo que a condição seja considerada inválida no primeiro teste o bloco será executado pelo menos uma vez.
+
+A estrutura de sintaxe do controle de repetição **do / while** é exibida abaixo:
+
+```
+    //estrutura do controle de fluxo do while
+    
+    do{
+        //comando que será executado até que a
+        //expressão de validação torne-se falsa
+    }
+    while(expressão booleana de validação);
+```
+
+- Exemplo de Do While: 
+
+```Java
+
 ```
