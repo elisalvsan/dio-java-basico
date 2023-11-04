@@ -101,3 +101,220 @@ Para uma melhor ilustração, iremos representar os conceitos de visibilidade de
 *Modificador public*
 
 Como o próprio nome representa, quando nossa classe, método e atributo é definido com public, qualquer outra classe em qualquer outro pacote pode visualizar tais recursos.
+
+**Class Atendente**
+```Java
+package lanchonete;
+
+public class Atendente {
+
+	public void servindoMesa() {
+		// ...?
+		System.out.println("SERVINDO MESA");
+	}
+	
+	public void pegarLancheCozinha() {
+		System.out.println("PEGANDO O LANCHE NA COZINHA");
+	}
+	
+	public void receberPagamento() {
+		System.out.println("RECEBANDO PAGAMENTO");
+	}
+	
+	public void trocarGas() {
+		System.out.println("ATENDENTE TROCANDO O GAS");
+	}
+	
+	public void pegarPedidoBalcao() {
+		System.out.println("PEGANDO O PEDIDO NO BALCAO");
+	}
+}
+```
+
+**Class Almoxarife**
+```Java
+package lanchonete;
+
+public class Almoxarife {
+
+	public void controlarEntrada() {
+		System.out.println("CONTROLANDO A ENTRADA DOS ITENS");
+	}
+	
+	public void controlarSaida() {
+		System.out.println("CONTROLANDO A SAIDA DOS ITENS");
+	}
+	
+	public void entregarIgredientes() {
+		System.out.println("ENTREGANDO INGREDIENTES");
+		// ...?
+	}
+	
+	public void trocarGas() {
+		System.out.println("ALMOXARIFE TROCANDO O GAS");
+	}
+	
+}
+
+```
+
+**Class Cliente**
+```Java
+package lanchonete;
+
+public class Cliente {
+	
+	public void escolherLanche() {
+		System.out.println("ESCOLHANDO O LANCHE");
+	}
+	
+	public void fazerPedido() {
+		System.out.println("FAZENDO O PEDIDO");
+	}
+	
+	public void pagarConta() {
+		System.out.println("PAGANDO A CONTA");
+	}
+	
+	public void consultarSaldoAplicativo() {
+		System.out.println("CONSULTANDO SALDO NO APLICATIVO");
+	}
+	
+	public void pegarPedidoBalcao() {
+		System.out.println("PEGANDO O PEDIDO NO BALCAO");
+	}
+}
+```
+
+**Class Cozinheiro**
+```Java
+package lanchonete;
+
+public class Cozinheiro {
+
+	public void adicionarLancheNoBalcao() {
+		System.out.println("ADICIONANDO LANCHE NATURAL HAMBURGER NO BALCAO");
+	}
+
+	public void adicionarSucoNoBalcao() {
+		System.out.println("ADICIONANDO SUCO NO BALCAO");
+	}
+
+	public void adicionarComboNoBalcao() {
+		adicionarLancheNoBalcao();
+		adicionarSucoNoBalcao();
+	}
+
+	public void prepararLanche() {
+		System.out.println("PREPARENDO LANCHE TIPO HAMBURGUER");
+	}
+
+	public void prepararVitamina() {
+		System.out.println("PRAPARANDO SUCO");
+	}
+
+	public void prepararCombo() {
+		prepararLanche();
+		prepararVitamina();
+	}
+
+	public void selecionarIngredientesLanche() {
+		System.out.println("SELECIONADO O PÃO, OVO E CARNE");
+	}
+
+	public void selecionarIngredientesVitamina() {
+		System.out.println("SELECIONADO FREUTA, LEITE E SUCO");
+	}
+
+	public void lavarIngredientes() {
+		System.out.println("LAVANDO INGREDIENTES");
+	}
+
+	public void baterVitaminaLiquidificador() {
+		System.out.println("BATENDO VITAMINA LIQUIDIFICADOR");
+	}
+
+	public void fritarIngredietesLanche() {
+		System.out.println("FRITANDO A CARNE E OVO PARA O HAMBURGER");
+	}
+
+	public void pedirParaTrocarGas(Atendente meuAmigo) {
+		meuAmigo.trocarGas();
+	}
+
+	public void pedirParaTrocarGas(Almoxarife meuAmigo) {
+		meuAmigo.trocarGas();
+	}
+
+	public void pedirIngedientes(Almoxarife almoxarife) {
+		almoxarife.entregarIgredientes();;
+	}
+}
+
+```
+
+**Class Estabelecimento**
+```Java
+package lanchonete;
+
+public class Estabelecimento {
+
+	public static void main(String[] args) {
+
+		Cozinheiro cozinheiro = new Cozinheiro();
+
+		// açoes que não precisam estarem disponíveis para toda a aplicação
+
+		cozinheiro.lavarIngredientes();
+		cozinheiro.baterVitaminaLiquidificador();
+		cozinheiro.selecionarIngredientesVitamina();
+		cozinheiro.prepararLanche();
+		cozinheiro.prepararVitamina();
+		cozinheiro.prepararVitamina();
+
+		// ações que o estabelecimento precisa ter ciência
+
+		cozinheiro.adicionarSucoNoBalcao();
+		cozinheiro.adicionarLancheNoBalcao();
+		cozinheiro.adicionarComboNoBalcao();
+
+		Almoxarife almoxarife = new Almoxarife();
+
+		// açoes que não precisam estarem disponíveis para toda a aplicação
+		almoxarife.controlarEntrada();
+		almoxarife.controlarSaida();
+
+		// ações que somente o seu pacote cozinha precisa conhecer (default)
+
+		almoxarife.entregarIgredientes();
+		almoxarife.trocarGas();
+
+		Atendente atendente = new Atendente();
+
+		atendente.pegarLancheCozinha();
+		atendente.receberPagamento();
+		atendente.servindoMesa();
+
+		// ação que somente o seu pacote cozinha precisa conhecer (default)
+
+		atendente.trocarGas();
+
+		Cliente cliente = new Cliente();
+
+		cliente.escolherLanche();
+		cliente.fazerPedido();
+		cliente.pagarConta();
+
+		// não deveria, mas o estabelecimento ainda não definio normas de atendimento
+		cliente.pegarPedidoBalcao();
+
+		// esta ação é muito sigilosa, que tal ser privada?
+		cliente.consultarSaldoAplicativo();
+
+		// já pensou os clientes ouvindo que o gás acabou?
+		cozinheiro.pedirParaTrocarGas(atendente);
+		cozinheiro.pedirParaTrocarGas(almoxarife);
+	}
+
+}
+```
