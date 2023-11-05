@@ -1,5 +1,10 @@
 package lanchonete;
 
+import lanchonete.area.cliente.Cliente;
+import lanchonete.atendimento.Atendente;
+import lanchonete.atendimento.cozinha.Almoxarife;
+import lanchonete.atendimento.cozinha.Cozinheiro;
+
 public class Estabelecimento {
 
 	public static void main(String[] args) {
@@ -27,20 +32,11 @@ public class Estabelecimento {
 		almoxarife.controlarEntrada();
 		almoxarife.controlarSaida();
 
-		// ações que somente o seu pacote cozinha precisa conhecer (default)
-
-		almoxarife.entregarIgredientes();
-		almoxarife.trocarGas();
-
 		Atendente atendente = new Atendente();
 
 		atendente.pegarLancheCozinha();
 		atendente.receberPagamento();
 		atendente.servindoMesa();
-
-		// ação que somente o seu pacote cozinha precisa conhecer (default)
-
-		atendente.trocarGas();
 
 		Cliente cliente = new Cliente();
 
@@ -48,14 +44,14 @@ public class Estabelecimento {
 		cliente.fazerPedido();
 		cliente.pagarConta();
 
-		// não deveria, mas o estabelecimento ainda não definio normas de atendimento
+		// não deveria, mas o estabelecimento ainda não definio 
+		//normas de atendimento
 		cliente.pegarPedidoBalcao();
 
 		// esta ação é muito sigilosa, que tal ser privada?
 		cliente.consultarSaldoAplicativo();
 
 		// já pensou os clientes ouvindo que o gás acabou?
-		cozinheiro.pedirParaTrocarGas(atendente);
 		cozinheiro.pedirParaTrocarGas(almoxarife);
 	}
 

@@ -318,3 +318,15 @@ public class Estabelecimento {
 
 }
 ```
+
+*Modificador default*
+
+O modificador *default* está fortemente associado a organização das classes por pacotes, algumas implementações não precisam estar disponíveis por todo o projeto, e é este modificador de acesso que restrige a visibilidade por pacotes.
+
+Dentro do pacote **lanchonete**, iremos criar dois sub-pacotes para representar a divisão do estabelecimento.
+
+- **lanchonete.atendimento.cozinha**: pacote que contém classes da parte da cozinha da lanchonete e atendimentos.
+- **lanchonete.area.cliente**: pacote que contém classes relacionadas ao espaço do cliente.
+
+![imagem de organização de pacotes](image.png)
+

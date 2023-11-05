@@ -1,4 +1,4 @@
-package lanchonete;
+package lanchonete.atendimento;
 
 public class Atendente {
 
@@ -15,7 +15,7 @@ public class Atendente {
 		System.out.println("RECEBANDO PAGAMENTO");
 	}
 	
-	public void trocarGas() {
+	void trocarGas() {
 		System.out.println("ATENDENTE TROCANDO O GAS");
 	}
 	
