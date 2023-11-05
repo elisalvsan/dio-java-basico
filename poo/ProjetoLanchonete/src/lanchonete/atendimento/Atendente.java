@@ -3,11 +3,11 @@ package lanchonete.atendimento;
 public class Atendente {
 
 	public void servindoMesa() {
-		// ...?
+		pegarLancheCozinha();
 		System.out.println("SERVINDO MESA");
 	}
 	
-	public void pegarLancheCozinha() {
+	private void pegarLancheCozinha() {
 		System.out.println("PEGANDO O LANCHE NA COZINHA");
 	}
 	
@@ -19,7 +19,8 @@ public class Atendente {
 		System.out.println("ATENDENTE TROCANDO O GAS");
 	}
 	
-	public void pegarPedidoBalcao() {
+	@SuppressWarnings("unused")
+	private void pegarPedidoBalcao() {
 		System.out.println("PEGANDO O PEDIDO NO BALCAO");
 	}
 }

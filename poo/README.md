@@ -330,3 +330,12 @@ Dentro do pacote **lanchonete**, iremos criar dois sub-pacotes para representar 
 
 ![imagem de organização de pacotes](image.png)
 
+**Modificador private**
+
+Depois de reestruturar nosso estabelecimento(projeto), onde, temos as divisões (pacotes) espaço do cliente e atendimento, chegou a hora de uma reflexão sobre visibilidade ou modificadores de acesso.
+
+Conhecemos as ações disponíveis nas classes Cozinheiro, Almoxarife, Atendente e Cliente, mesmo com a organização da visibilidade por pacotes, será se realmente estas classes precisam ser tão explicitas?
+
+- Será se o Cozinheiro precisa saber que\como o Almoxarife controle as entradas e saídas?
+- Que o Cliente precisa saber como o Atendente receve o pedido  para servir sua mesa?
+- Que o Atendente precisa saber que antes de pagar o Cliente consulta o saldo no App?

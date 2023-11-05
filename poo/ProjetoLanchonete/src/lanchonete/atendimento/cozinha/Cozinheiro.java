@@ -1,60 +1,69 @@
 package lanchonete.atendimento.cozinha;
 
-import lanchonete.atendimento.Atendente;
-
 public class Cozinheiro {
 
+	//pode ser default
 	public void adicionarLancheNoBalcao() {
 		System.out.println("ADICIONANDO LANCHE NATURAL HAMBURGER NO BALCAO");
 	}
 
+	//pode ser default
 	public void adicionarSucoNoBalcao() {
 		System.out.println("ADICIONANDO SUCO NO BALCAO");
 	}
 
+	//pode ser default
 	public void adicionarComboNoBalcao() {
 		adicionarLancheNoBalcao();
 		adicionarSucoNoBalcao();
 	}
 
-	public void prepararLanche() {
+	private void prepararLanche() {
 		System.out.println("PREPARENDO LANCHE TIPO HAMBURGUER");
 	}
 
-	public void prepararVitamina() {
+	private void prepararVitamina() {
 		System.out.println("PRAPARANDO SUCO");
 	}
 
-	public void prepararCombo() {
+	@SuppressWarnings("unused")
+	private void prepararCombo() {
 		prepararLanche();
 		prepararVitamina();
 	}
-
-	public void selecionarIngredientesLanche() {
+	
+	@SuppressWarnings("unused")
+	private void selecionarIngredientesLanche() {
 		System.out.println("SELECIONADO O PÃO, OVO E CARNE");
 	}
 
-	public void selecionarIngredientesVitamina() {
+	@SuppressWarnings("unused")
+	private void selecionarIngredientesVitamina() {
 		System.out.println("SELECIONADO FREUTA, LEITE E SUCO");
 	}
 
-	public void lavarIngredientes() {
+	@SuppressWarnings("unused")
+	private void lavarIngredientes() {
 		System.out.println("LAVANDO INGREDIENTES");
 	}
 
-	public void baterVitaminaLiquidificador() {
+	@SuppressWarnings("unused")
+	private void baterVitaminaLiquidificador() {
 		System.out.println("BATENDO VITAMINA LIQUIDIFICADOR");
 	}
 
-	public void fritarIngredietesLanche() {
+	@SuppressWarnings("unused")
+	private void fritarIngredietesLanche() {
 		System.out.println("FRITANDO A CARNE E OVO PARA O HAMBURGER");
 	}
 
-	public void pedirParaTrocarGas(Almoxarife meuAmigo) {
+	@SuppressWarnings("unused")
+	private void pedirParaTrocarGas(Almoxarife meuAmigo) {
 		meuAmigo.trocarGas();
 	}
 
-	public void pedirIngedientes(Almoxarife almoxarife) {
+	@SuppressWarnings("unused")
+	private void pedirIngedientes(Almoxarife almoxarife) {
 		almoxarife.entregarIgredientes();;
 	}
 }
