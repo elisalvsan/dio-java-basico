@@ -339,3 +339,23 @@ Conhecemos as ações disponíveis nas classes Cozinheiro, Almoxarife, Atendente
 - Será se o Cozinheiro precisa saber que\como o Almoxarife controle as entradas e saídas?
 - Que o Cliente precisa saber como o Atendente receve o pedido  para servir sua mesa?
 - Que o Atendente precisa saber que antes de pagar o Cliente consulta o saldo no App?
+
+### Getters e Setters
+
+Seguindo a convensão Java Beans
+
+Os métodos "Getters" e "Setters" são utilizados para buscar valores de atributos ou definir novos valores de atributos de instância de classes.
+
+O método **Getter** retorna o valor do atributo especificado.
+
+O método **Setter** define outro novo valor para atributo especificado.
+
+Seguindo a convensão Java Beans, uma classe que contém está estrutura de estados deverá seguir as regras abaixo:
+
+- Os atributos precisam ter o modificador de acesso **private**. Ex.: private String nome;
+
+- Como agora os atributos estarão somente a nível de classe, precisamos dos métodos **get**X e **set**X. Ex.: getNome() e setNome(String novoNome);
+
+- O método **get** é responsável por obter o valor atual do atributo, logo ele precisa ser public retornar um tipo correspondente ao valor. Ex.: public String getNome() {};
+
+- O método **set** é responsável por definir ou modificador o valor de um atributo em um objeto, logo ele também precisa ser public, receber um parâmetro do mesmo tipo de variável mas não retorna nenhum valor void. Ex.: public void setNome(String novoNome);
