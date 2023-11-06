@@ -14,7 +14,7 @@ Exemplo: Ligar um veículo exige muitas etapas para a engenharia, mas o condutor
 - **Herança:** Características e comportamentos comuns podem ser elevados e compartilhados através de uma hierarquia de objetos.
 Exemplo: Um Carro e uma Motocicleta possuem propriedades como placa, chassi, ano de fabricação e métodos como acelerar, freae. Logo para não ser um processo de codificação redundante, podemos desfrutar da herança criando uma classe **Veiculo** para que seja herdada por Carro e Motocicleta.
 
-**Abstração:** É a indisponibilidade para determinar a lógica de um ou vários comportamentos em um objeto.
+- **Abstração:** É a indisponibilidade para determinar a lógica de um ou vários comportamentos em um objeto.
 Exemplo: **Veiculo** determina duas ações como acelerar e frear, logo estes comportamentos deverão ser *abstratos* pois existem mais de uma maneira de se realizar a mesma operação.
 
 - **Polimorfismo:** São as inúmeras maneiras de se realizar uma mesma ação.
